@@ -25,12 +25,12 @@ function addBook() {
     if(document.getElementById('inputBookIsComplete').checked){
         const bookObject = generateBookObject(generateID, title, author, year, true);
         incompleteBookshelfList.push(bookObject);
-        alert("Buku berhasil ditambahkan ke rak 'Selesai dibaca' !");
+        alert("The book has been successfully added to the 'Read' shelf!");
     }
     else{
         const bookObject = generateBookObject(generateID, title, author, year, false);
         incompleteBookshelfList.push(bookObject);
-        alert("Buku berhasil ditambahkan ke rak 'Belum selesai dibaca' !");
+        alert("The book has been successfully added to the 'Unread' shelf!");
     }  
     
     document.dispatchEvent(new Event(RENDER_EVENT));
@@ -93,7 +93,7 @@ function makeBook(bookObject) {
 
         undoButton.addEventListener('click', function() {
             undoReadBookFromCompleted(bookObject.id);
-            alert("Buku berhasil dipindahkan ke rak 'Belum selesai dibaca' !");
+            alert("The book has been moved to the 'Unread' shelf!");
         });
 
         const trashButton = document.createElement('button');
@@ -101,7 +101,7 @@ function makeBook(bookObject) {
 
         trashButton.addEventListener('click', function() {
             removeBookFromCompleted(bookObject.id);
-            alert("Buku berhasil dihapus!");
+            alert("The book has been deleted!");
         });
 
         container.append(undoButton, trashButton);
@@ -111,7 +111,7 @@ function makeBook(bookObject) {
 
         checkButton.addEventListener('click', function() {
             addBookToCompleted(bookObject.id);
-            alert("Buku berhasil dipindahkan ke rak 'Selesai dibaca' !");
+            alert("The book has been moved to the 'Read' shelf!");
         });
 
         container.append(checkButton);
