@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5A8F7B;
+    color: white;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.input_section > h2 {
+    text-align: center;
+    color: #5A8F7B;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: #5A8F7B;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+
+.input_section > form > .input > label {
+    color: #5A8F7B;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: #5A8F7B;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.book_shelf > h2 {
+    color: #5A8F7B;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3, p {
+    margin: 8px 0;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-color: #5A8F7B;
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-color: #5A8F7B;
+    color: white;
+}
+
+.check-button {
+    display: flex;
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/checkOutline.png');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('./assets/checkSolid.png');
+    background-size: contain;
+}
+
+.trash-button {
+    float: right;
+    height: 40px;
+    width: 32px;
+
+    background: url('./assets/trashOutline.png');
+    background-size: contain;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('./assets/trashFill.png');
+    background-size: contain;
+}
+
+.undo-button {
+    width: 40px;
+    height: 40px;
+
+    background: url('./assets/undoOutline.png');
+    background-size: contain;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('./assets/undoSolid.png');
+    background-size: contain;
+}
+
+.check-button:focus, .trash-button {
+    outline: none;
+}
+
